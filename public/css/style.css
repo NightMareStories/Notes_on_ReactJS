@@ -1,0 +1,24 @@
+.hide {
+    display: none;
+}
+
+.active {
+    color: red !important;
+}
+
+.header {
+    margin-bottom: 100px;
+}
+
+.create-show-block {
+    border-radius: 12px;
+    height: 150px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+}
