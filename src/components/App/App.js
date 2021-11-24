@@ -19,7 +19,7 @@ function App() {
   return (
     <>
       <Router>
-        {/* <HeaderGeneral /> */}
+        <HeaderGeneral />
         <Header />
         <Switch>
           <Route exact path="/" component={Main} />
@@ -30,7 +30,7 @@ function App() {
           <Route component={Error} />
         </Switch>
         <Footer />
-        {/* <FooterGeneral /> */}
+        <FooterGeneral />
       </Router>
     </>
   );
