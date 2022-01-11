@@ -13,7 +13,17 @@
 ### **7. `Now you need to create a database, on the left side, click on "New", enter the name "notes_on_reactjs" and leave the default encoding, click "Create"`;**
 ### **8. `Select the "created" database and on the right on the top toolbar select "Import", now you need to specify the "SQL" file from the "backend_project" folder, after selecting, scroll to the bottom and press "go". You can now track the added notes in "notes_on_reactjs"`;**
 ### **9. `Return to the code editor, open a terminal and launch the "Notes_on_ReactJS" application with a command in the terminal`;**
+```
+
+npm start
+
+```
 ### **10. `Open another terminal and go to the "backend_project" folder, start the "NodeJS" server with a command in the terminal`;**
+```
+
+node index.js
+
+```
 &nbsp;
 ## **Finally, you can start working with the application!**
 
