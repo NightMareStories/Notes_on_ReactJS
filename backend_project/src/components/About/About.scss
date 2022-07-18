@@ -1,0 +1,48 @@
+//======================= import ========================
+
+@import '../../vars';
+
+//=======================================================
+
+
+//======================= styles ========================
+
+.block-about {
+    display: flex;
+    justify-content: center;
+    &__info {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0px 40px;
+    }
+}
+
+.info-about {
+    &__text {
+        font-size: 18px;
+        line-height: 2;
+        background-color: #ffffff;
+        padding: 20px;
+    }
+}
+
+//=======================================================
+
+
+//======================= media =========================
+
+@media (max-width: 576px) {
+    .block-about {
+        &__info {
+            padding: 0;
+        }
+    }
+    .info-about {
+        &__text {
+            font-size: 15px;
+        }
+    }
+}
+
+//=======================================================
