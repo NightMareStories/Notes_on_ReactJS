@@ -15,7 +15,7 @@ function Footer(props) {
                     </div>
                     <nav className="g-block-footer__nav">
                     <ul className="g-block-footer__actions g-actions-footer">
-                        <li><a href='/' className="g-actions-footer__link"><span>GitHub</span></a></li>
+                        <li><a href='https://github.com/NightMareStories/Notes-on-ReactJS.git' className="g-actions-footer__link"><span>GitHub</span></a></li>
                         <li><a href='/' className="g-actions-footer__link"><span>My Portfolio</span></a></li>  
                     </ul >
             </nav >

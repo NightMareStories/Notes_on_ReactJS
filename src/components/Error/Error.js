@@ -9,7 +9,7 @@ function Error() {
                     <div className="main-error__block error-info">
                         <h3 className="error-info__title">Error 404!</h3>
                         <div className="error-info__img">
-                            <img src="./img/error-404-img.png" alt="" className="error-info__img_img"/>
+                            <img src="/img/error-404-img.png" alt="error-404-img" className="error-info__img_img"/>
                         </div>
                         <div className="error-info__text">
                             <p className="error-info__text_text">Something went wrong!</p>

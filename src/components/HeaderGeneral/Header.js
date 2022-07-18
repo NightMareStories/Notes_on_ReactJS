@@ -9,8 +9,8 @@ function Header() {
                         <div className="g-top-header__column g-header-info">
                             <div className="g-header-info__logo">
                                 <picture>
-                                    <source srcSet="img/logo-img.webp" type="image/webp" className="g-header-info__logo_img" />
-                                    <img src="img/logo-img.png" alt="logo-img" className="g-header-info__logo_img" />
+                                    <source srcSet="/img/logo-img.webp" type="image/webp" className="g-header-info__logo_img" />
+                                    <img src="/img/logo-img.png" alt="logo-img" className="g-header-info__logo_img" />
                                 </picture>
                             </div>
                             <div className="g-header-info__text">
@@ -26,7 +26,7 @@ function Header() {
                         <div className="g-header-nav__content">
                 <nav className="g-header-nav__column">
                     <ul className="g-header-nav__actions g-actions-header">
-                        <li><a href='/' className="g-actions-header__link"><span>GitHub</span></a></li>
+                        <li><a href='https://github.com/NightMareStories/Notes-on-ReactJS.git' className="g-actions-header__link"><span>GitHub</span></a></li>
                         <li><a href='/' className="g-actions-header__link"><span>My Portfolio</span></a></li>
                     </ul >
                 </nav >
