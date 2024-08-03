@@ -1,15 +1,20 @@
-//======================= import ========================
+/*======================= Import ========================*/
 
 @import '../../vars';
 
-//=======================================================
+/*=======================================================*/
 
 
-//======================= styles ========================
+/*==================== Main styles ======================*/
+
+.main {
+    flex: 1 0 auto;
+}
 
 .main-columns {
     display: flex;
     justify-content: center;
+
     &__column {
         display: flex;
         flex: 0 0 33.33333%;
@@ -17,36 +22,42 @@
 }
 
 .column-content {
-   margin: 0px 5px 0px 30px;
-   &:last-child {
-       margin: 0px 30px 0px 5px;
-   }
-   &__create {
-       display: flex;
-       flex-direction: column;
-   }
-   &__view {
-       display: flex;
-       flex-direction: column;
-   }
+    margin: 0px 5px 0px 30px;
+
+    &:last-child {
+        margin: 0px 30px 0px 5px;
+    }
+
+    &__create {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__view {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .create-block {
     transition: all .5s ease;
+
     &__img {
         width: 100%;
         height: 100%;
+
         &_img {
             width: 100%;
             height: 100%;
         }
     }
+
     &__create {
         vertical-align: top;
         font-family: $font-bold;
         text-transform: uppercase;
         font-size: 16px;
-        background-color: rgb(70,193,255);
+        background-color: rgb(70, 193, 255);
         padding: 15px 15px;
         color: #ffffff;
         transition: all .5s ease;
@@ -55,32 +66,34 @@
 
 .view-block {
     transition: all .5s ease;
+
     &__img {
         width: 100%;
         height: 100%;
+
         &_img {
             width: 100%;
             height: 100%;
         }
     }
+
     &__view {
         vertical-align: top;
         text-align: right;
         font-family: $font-bold;
         text-transform: uppercase;
         font-size: 16px;
-        background-color: rgb(70,193,255);
+        background-color: rgb(70, 193, 255);
         padding: 15px 15px;
         color: #ffffff;
         transition: all .5s ease;
     }
-    
 }
 
-//=======================================================
+/*=======================================================*/
 
 
-//======================= media ========================= 
+/*======================= Media =========================*/
 
 @media (max-width: 768px) {
     .main-columns {
@@ -88,12 +101,14 @@
             flex: 0 0 50%;
         }
     }
+
     .create-block {
         &__create {
             font-size: 12px;
             padding: 10px 5px;
         }
     }
+
     .view-block {
         &__view {
             font-size: 12px;
@@ -105,25 +120,29 @@
 @media (min-width: 1200px) {
     .view-block {
         opacity: 0.7;
+
         &:hover {
             opacity: 1;
-            box-shadow: 0px 0px 10px 5px rgba(0,0,0, .30);
+            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, .30);
+
             .view-block__view {
-                background-color: rgb(0,148,255);
+                background-color: rgb(0, 148, 255);
             }
         }
     }
+
     .create-block {
         opacity: 0.7;
+
         &:hover {
             opacity: 1;
-            box-shadow: 0px 0px 10px 5px rgba(0,0,0, .30);
+            box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, .30);
+
             .view-block__view {
-                background-color: rgb(0,148,255);
+                background-color: rgb(0, 148, 255);
             }
         }
     }
 }
 
-//=======================================================
-
+/*=======================================================*/

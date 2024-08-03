@@ -6,19 +6,25 @@
 &nbsp;
 ### **1. `Install "`[NodeJS](https://nodejs.org/)`" from the official site`;**
 ### **2. `Download and install the "basic" version of "`[OpenServer](https://ospanel.io)`" from the official website`;**
-### **3. `Install all modules from the "package.json" file using a command in the terminal`;**
+### **3. `Install all modules from the "package.json" file using a command in the terminal`:**
+```
+
+npm i
+
+```
 ### **4. `Go to the "backend_project" folder and install all modules with the same command in the terminal`;**
-### **5. `After completing all the previous steps, open "OpenServer" and click "start server", then go to the "Advanced" tab and select the "PhpMyAdmin" application - for working with databases`;**
-### **6. `Enter the password and login, by default: "root", "root"`;**
-### **7. `Now you need to create a database, on the left side, click on "New", enter the name "notes_on_reactjs" and leave the default encoding, click "Create"`;**
-### **8. `Select the "created" database and on the right on the top toolbar select "Import", now you need to specify the "SQL" file from the "backend_project" folder, after selecting, scroll to the bottom and press "go". You can now track the added notes in "notes_on_reactjs"`;**
-### **9. `Return to the code editor, open a terminal and launch the "Notes_on_ReactJS" application with a command in the terminal`;**
+### **5. `After completing all the previous steps, open "OpenServer". Next, go to "Settings", select the "Modules" tab. From the "MySQL / MariaDB" drop-down list, select the latest version of "MySQL" (currently "MySQL-8.0-Win10") and save your changes`;** 
+### **6. `Close the settings and click "Run server", then go to the "Advanced" tab and select the "PhpMyAdmin" application - for working with databases`;**
+### **7. `Enter your login and password, by default: "root", "" (leave the password field empty)`;**
+### **8. `Now you need to create a database, on the left side, click on "New", enter the name "notes_on_reactjs" and leave the default encoding, click "Create"`;**
+### **9. `Select the "created" database and on the right on the top toolbar select "Import", now you need to specify the "SQL" file from the "backend_project" folder, after selecting, scroll to the bottom and press "go". You can now track the added notes in "notes_on_reactjs"`;**
+### **10. `Return to the code editor, open a terminal and launch the "Notes_on_ReactJS" application with a command in the terminal`;**
 ```
 
 npm start
 
 ```
-### **10. `Open another terminal and go to the "backend_project" folder, start the "NodeJS" server with a command in the terminal`;**
+### **11. `Open another terminal and go to the "backend_project" folder, start the "NodeJS" server with a command in the terminal`;**
 ```
 
 node index.js

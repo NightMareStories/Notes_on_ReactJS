@@ -1,8 +1,7 @@
 import './Create.scss';
-import React, {useState} from "react";
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import env from "../../env.json";
-
+import env from '../../env.json';
 
 function Create(props) {
     const [url, setUrl] = useState('');
@@ -50,13 +49,13 @@ function Create(props) {
 
         if (copy.classList.contains('_copied')) {
             copy.classList.remove('_copied');
-             setTimeout(() => {
+            setTimeout(() => {
                 copy.classList.add('_copied');
-             },300);
+            }, 300);
         }
         else {
             copy.classList.add('_copied');
-            props.setCopyNote(input.defaultValue);   
+            props.setCopyNote(input.defaultValue);
             setCopy('Copied!');
         }
     }
@@ -66,7 +65,7 @@ function Create(props) {
             <div className="create-content _container">
                 <div className="create-content__create notes-create">
                     <div className={`notes-create__create form-notes ${formClass}`}>
-                        <div className="form-notes__block block-form"> 
+                        <div className="form-notes__block block-form">
                             <div className="block-form__content content-form">
                                 <form onSubmit={loadDataFromForm} className="content-form__form">
                                     <label htmlFor="note" className="content-form__form_label">Create your note</label>
@@ -84,7 +83,7 @@ function Create(props) {
                                 <div className="notes-result__result_url"><a href={url}>{url}</a></div>
                                 <p className="notes-result__result_text">2. Click on the ID-Note link to copy it to the clipboard, then click the button "view other notes" and paste the note into the input field;</p>
                                 <div className="notes-result__result_urlNote">
-                                    <input type="text" defaultValue={props.urlNote} onClick={copyNote} readOnly/>
+                                    <input type="text" defaultValue={props.urlNote} onClick={copyNote} readOnly />
                                 </div>
                                 <div className="notes-result__result_copy" ref={copied}><span>{copy}</span></div>
                                 <div className="notes-result__result_buttons result-buttons">
@@ -95,7 +94,7 @@ function Create(props) {
                                         <Link to="/note" className="result-buttons__view_btn _btn">View other notes</Link>
                                     </div>
                                 </div>
-                            </div>   
+                            </div>
                         </div>
                     </div>
                 </div>

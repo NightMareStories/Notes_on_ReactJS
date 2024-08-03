@@ -1,16 +1,37 @@
 {
-  "name": "Notes-On-ReactJS_Back-End-project",
-  "version": "1.0.0",
-  "description": "",
+  "name": "notes_on_reactjs",
+  "version": "1.1.0",
+  "description": "'Notes on ReactJS' is an application written in 'ReactJS', 'NodeJS' and using the server-side development environment 'OpenServer'. The work of the application is to create notes or messages by the user and view the already created notes or messages for review",
+  "private": true,
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "mysql2": "^2.2.5",
-    "randomstring": "^1.1.5",
-    "sequelize": "^6.3.5"
+    "mysql2": "^3.9.7",
+    "randomstring": "^1.3.0",
+    "sequelize": "^6.37.3"
+  },
+  "scripts": {
+    "clean": "rm -rf node_modules",
+    "update": "npm update --save-dev && npm update --save"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NightMareStories/Notes_on_ReactJS.git"
+  },
+  "keywords": [
+    "App",
+    "HTML5",
+    "JavaScriptES6",
+    "SCSS",
+    "ReactJS",
+    "NodeJS",
+    "OpenServer",
+    "Sequelize",
+    "MySQL",
+    "PhpMyAdmin"
+  ],
+  "author": "NightMareStories",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NightMareStories/Notes_on_ReactJS/issues"
   }
 }

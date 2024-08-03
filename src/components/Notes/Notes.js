@@ -1,10 +1,10 @@
 import './Notes.scss';
-import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
-import env from "../../env.json";
+import { useEffect, useState } from 'react';
+import { useParams, Link } from 'react-router-dom';
+import env from '../../env.json';
 
 function Notes(props) {
-    let {noteURL}  = useParams();
+    let { noteURL } = useParams();
     const [noteText, setNoteText] = useState('');
     const [lineClass, setLineClass] = useState('_hide');
     const [formClass, setFormClass] = useState('_hide');
@@ -13,35 +13,35 @@ function Notes(props) {
     let count = 0;
 
     useEffect(() => {
-            if (noteURL !== undefined) {
-                fetch(env.urlBackend, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded',
-                    },
-                    body: JSON.stringify({ 'url': noteURL })
+        if (noteURL !== undefined) {
+            fetch(env.urlBackend, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: JSON.stringify({ 'url': noteURL })
+            })
+                .then(response => response.json())
+                .then(response => {
+                    console.log(response);
+                    if (response.result) {
+                        setNoteText(response.note);
+                        setLineClass('');
+                        setFormClass('_hide');
+                        setErrorClass('_hide');
+                    }
+                    else if (!response.result) {
+                        setLineClass('_hide');
+                        setFormClass('_hide');
+                        setErrorClass('');
+                    }
                 })
-                    .then(response => response.json())
-                    .then(response => {
-                        console.log(response);
-                        if (response.result) {
-                            setNoteText(response.note);
-                            setLineClass('');
-                            setFormClass('_hide');
-                            setErrorClass('_hide');
-                        }
-                        else if (!response.result) {
-                            setLineClass('_hide');
-                            setFormClass('_hide');
-                            setErrorClass('');
-                        }
-                    })
-            }
-            else {
-                setLineClass('_hide');
-                setFormClass('');
-                setErrorClass('_hide');
-            }
+        }
+        else {
+            setLineClass('_hide');
+            setFormClass('');
+            setErrorClass('_hide');
+        }
     }, []);
 
     function getNote(event) {
@@ -65,13 +65,13 @@ function Notes(props) {
         event.preventDefault();
 
         let input = event.target;
-        
+
         if (input.value === '' && count === 0) {
             input.value = props.copyNote;
             count++;
         }
     }
-    
+
     return (
         <main className="main">
             <div className="notes-content _container">
@@ -96,7 +96,7 @@ function Notes(props) {
                                 <p className="content-error__description">Please check if the note-ID is correct!</p>
                                 <div className="content-error__buttons">
                                     <Link to="/create" className="content-error__buttons_create _btn">Create new note</Link>
-                                    <a href="/note" className="content-error__buttons_view _btn">View other notes</a> 
+                                    <a href="/note" className="content-error__buttons_view _btn">View other notes</a>
                                 </div>
                             </div>
                         </div>
@@ -106,7 +106,7 @@ function Notes(props) {
                             <div className="search-block__content content-search">
                                 <form action="" onSubmit={getNote} className="content-search__form">
                                     <label htmlFor="url" className="content-search__form_label">Search for a note</label>
-                                    <input type="text" name="url" id="url" className="content-search__form_input" onClick={pasteCopied} autoComplete="off" placeholder="Enter the id of the note"/>
+                                    <input type="text" name="url" id="url" className="content-search__form_input" onClick={pasteCopied} autoComplete="off" placeholder="Enter the id of the note" />
                                     <button type="submit" className="content-search__form_button _btn">Search</button>
                                 </form>
                             </div>
