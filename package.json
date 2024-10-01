@@ -1,6 +1,6 @@
 {
   "name": "notes_on_reactjs",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "'Notes on ReactJS' is an application written in 'ReactJS', 'NodeJS' and using the server-side development environment 'OpenServer'. The work of the application is to create notes or messages by the user and view the already created notes or messages for review",
   "private": true,
   "main": "index.js",
